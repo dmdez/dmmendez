@@ -9,7 +9,7 @@ activate :blog do |blog|
   # blog.permalink = ":year/:month/:day/:title.html"
   blog.sources = "posts/:year-:month-:day-:title.html"
   # blog.taglink = "tags/:tag.html"
-  # blog.layout = "layout"
+  blog.layout = "post"
   # blog.summary_separator = /(READMORE)/
   # blog.summary_length = 250
   # blog.year_link = ":year.html"
@@ -19,7 +19,7 @@ activate :blog do |blog|
 
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
-
+  
   # blog.paginate = true
   # blog.per_page = 10
   # blog.page_link = "page/:num"
@@ -95,6 +95,7 @@ configure :build do
   
   # Use relative URLs
   activate :relative_assets
+
   
   # Compress PNGs after build
   # First: gem install middleman-smusher

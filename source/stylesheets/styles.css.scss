@@ -26,6 +26,17 @@ pre {
     box-sizing: border-box;
 }
 
+table {
+    border-collapse: separate;
+    border-spacing: 3px;
+
+    th { background: #fff; }
+    th, td { padding: .5em; }
+    tr:nth-child(odd) td {
+        background-color: rgba(255,255,255, .4);
+    }
+}
+
 .canvas { max-width: 960px; margin: 0 auto; padding: 1em; }
 
 .brand {
@@ -84,6 +95,8 @@ pre {
     padding: 1em 0;
 
     img { max-width: 100%; height: auto; }
+
+    article { padding: 0 1em; }
 }
 
 .page-header {
@@ -105,11 +118,13 @@ pre {
         width: 1.6em;
         text-align: center;
 
-        &:hover {
-            background: #666;
-            color: #fff;
-        }
         span { display: none; }
+        &:before { position: relative; left: -.05em; }
+        &.icon-linkedin { color: #069; }
+        &.icon-facebook { color: #627AAD;}
+        &:hover { background: #666; color: #fff; }
+        &:hover.icon-linkedin { background-color: #069; }
+        &:hover.icon-facebook { background-color: #627AAD;}
     }
 }
 

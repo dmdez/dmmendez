@@ -2,7 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />    
+    <%= javascript_include_tag 'modernizr' %>
     <%= stylesheet_link_tag "styles" %>
   </head>
   <body>
@@ -46,8 +48,10 @@
       </div>
 
       <footer class="page-footer">
-        &copy; 2012 <%= link_to 'Deric Mendez', 'http://www.dericmendez.com' %>
+        &copy; 2012 &mdash; <%= link_to 'Deric Mendez', 'http://www.dericmendez.com' %>
       </footer>
     </div>
+
+
   </body>
 </html>
