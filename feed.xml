@@ -18,9 +18,10 @@
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;h1 id='cardify'&gt;Cardify!!!&lt;/h1&gt;
+    <summary type="html"># Cardify!!!
 
-&lt;p&gt;So I had a client that had a particular need to print out recipe sized cards in the dimensions of 3x5, 4x6, etc&amp;#8230; Oh yeah, and I needed to be done within 40 hours. So there I was wondering what the hell I was going to do to produce this type of output within a normal work week. Since I&amp;#8217;m a frontend developer, I immediately thought of a client-side solution. But then I was trying to figure out how I was going to break content apart and overflow that content into multiple sections&amp;#8230; dynamically.&lt;/p&gt;</summary>
+So I had a client that had a particular need to print out recipe sized cards in the dimensions of 3x5, 4x6, etc... Oh yeah, and I needed to be done within 40 hours.  So there I was wondering what the hell I was going to do to produce this type of output within a normal work week. Since I'm a frontend developer, I immediately thought of a client-side solution.  But then I was trying to figure out how I was going to break content apart and overflow that content into multiple sections... dynamically.
+</summary>
     <content type="html">&lt;h1 id='cardify'&gt;Cardify!!!&lt;/h1&gt;
 
 &lt;p&gt;So I had a client that had a particular need to print out recipe sized cards in the dimensions of 3x5, 4x6, etc&amp;#8230; Oh yeah, and I needed to be done within 40 hours. So there I was wondering what the hell I was going to do to produce this type of output within a normal work week. Since I&amp;#8217;m a frontend developer, I immediately thought of a client-side solution. But then I was trying to figure out how I was going to break content apart and overflow that content into multiple sections&amp;#8230; dynamically.&lt;/p&gt;
@@ -30,25 +31,68 @@
 &lt;p&gt;We&amp;#8217;ll use the 3x5 cards as a base example for this. My first idea was to consume a block of content with javascript and calculate the targeted width and height of the 3x5 card and that would get me the number of cards I needed and then clone the content into each card and offset the content like so:&lt;/p&gt;
 
 &lt;p&gt;&lt;img alt='' src='/images/cardify-example1.png' /&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;h1&amp;gt;This is a code sample - we&amp;#39;ll try and make it longer to see if it breaks&amp;lt;/h1&amp;gt;&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;a href='/images/cardify-example1'&gt;Example 1&lt;/a&gt;&lt;/p&gt;</content>
+&lt;a href='/examples/cardify-example1.html'&gt;Example 1&lt;/a&gt;</content>
   </entry>
   <entry>
-    <title>Example Article</title>
-    <link rel="alternate" href="/2012/01/01/example-article.html"/>
-    <id>/2012/01/01/example-article.html</id>
-    <published>2012-01-01T00:00:00Z</published>
-    <updated>2012-01-01T00:00:00Z</updated>
+    <title>Pull a thumbnail gallery from Picasa's API</title>
+    <link rel="alternate" href="/2011/03/27/picasa-javascript-gallery.html"/>
+    <id>/2011/03/27/picasa-javascript-gallery.html</id>
+    <published>2011-03-27T00:00:00Z</published>
+    <updated>2011-03-27T00:00:00Z</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;h2 id='example_article'&gt;Example Article&lt;/h2&gt;
+    <summary type="html">&lt;h1 id='pull_a_thumbnail_gallery_from_picasas_api'&gt;Pull a thumbnail gallery from Picasa&amp;#8217;s API&lt;/h1&gt;
 
-&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;</summary>
-    <content type="html">&lt;h2 id='example_article'&gt;Example Article&lt;/h2&gt;
+&lt;p&gt;You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my &lt;a href='https://picasaweb.google.com/dmmendez' target='_blank'&gt;Picasa Web Album&lt;/a&gt;.&amp;#160; Just for reference, &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;Picasa has a nice api&lt;/a&gt; where you can pull a myriad of feeds and different types of feeds.&amp;#160; In my case, I just wanted to pull in six thumbnails from a specific album named &amp;#34;Featured&amp;#34; in a JSON format.&lt;/p&gt;</summary>
+    <content type="html">&lt;h1 id='pull_a_thumbnail_gallery_from_picasas_api'&gt;Pull a thumbnail gallery from Picasa&amp;#8217;s API&lt;/h1&gt;
 
-&lt;p&gt;This is an example article. You probably want to delete it and write your own articles!&lt;/p&gt;</content>
+&lt;p&gt;You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my &lt;a href='https://picasaweb.google.com/dmmendez' target='_blank'&gt;Picasa Web Album&lt;/a&gt;.&amp;#160; Just for reference, &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;Picasa has a nice api&lt;/a&gt; where you can pull a myriad of feeds and different types of feeds.&amp;#160; In my case, I just wanted to pull in six thumbnails from a specific album named &amp;#34;Featured&amp;#34; in a JSON format.&lt;/p&gt;
+
+&lt;p&gt;Starting off, here is the exact url I used to pull in my feed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;https://picasaweb.google.com/data/feed/base/user/113822536772850233036/albumid/5587272886788976673?kind=photo&amp;amp;amp;max-results=6&amp;amp;amp;thumbsize=80&amp;amp;amp;alt=json&amp;amp;amp;fields=entry(link[@rel=&amp;amp;#39;alternate&amp;amp;#39;],media:group(media:thumbnail))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;All of the numbers before the query string are just user and album id&amp;#39;s you need from your album.&amp;#160; You can find more information in the &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;API&lt;/a&gt;.&amp;#160; You can find these values easily by browsing your Picasa albums and looking at the url and RSS feeds.&lt;/p&gt;
+
+&lt;p&gt;Now, I&amp;#39;ll break down each parameter just to simply show what I did (although the API does way more than what I&amp;#39;m showing).&lt;/p&gt;
+&lt;table&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;kind&lt;/td&gt;
+            &lt;td&gt;photo&lt;/td&gt;
+            &lt;td&gt;Let&amp;#39;s you request different kinds of feeds&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;max-results&lt;/td&gt;
+            &lt;td&gt;6&lt;/td&gt;
+            &lt;td&gt;Maximun number of results&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;thumbsize&lt;/td&gt;
+            &lt;td&gt;80&lt;/td&gt;
+            &lt;td&gt;Size of thumbnail, which is variable.&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;alt&lt;/td&gt;
+            &lt;td&gt;json&lt;/td&gt;
+            &lt;td&gt;Type of feed, default is RSS&lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+            &lt;td&gt;fields&lt;/td&gt;
+            &lt;td&gt;
+                &lt;p&gt;
+                    entry(&lt;br /&gt;
+                    &amp;nbsp;link[@rel=&amp;#39;alternate&amp;#39;],&lt;br /&gt;
+                    &amp;nbsp;media:group(media:thumbnail)&lt;br /&gt;
+                    )&lt;/p&gt;
+            &lt;/td&gt;
+            &lt;td&gt;This option dictates what fields come through to your field.&amp;nbsp; So if you don&amp;#39;t want to clutter your feed with values you won&amp;#39;t use, that can be controlled here.&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;My favorite option had to be the &amp;#34;fields&amp;#34; parameter, just because it allows me to really narrow my feeds down so it&amp;#39;s not so cluttered with useless values.&lt;/p&gt;
+
+&lt;p&gt;Enjoy pulling your feeds from Picasa.&lt;/p&gt;</content>
   </entry>
 </feed>

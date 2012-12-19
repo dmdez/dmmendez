@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=10.0,initial-scale=1.0" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />    
+    <script src="../../../javascripts/modernizr.js" type="text/javascript"></script>
+    <link href="../../../stylesheets/styles.css" media="screen" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    
+    <div class="canvas">
+
+      <header class="page-header">
+        <a href="/" class="brand">Deric Mendez</a>
+        <ul>
+          
+            <li><a target="_blank" class="icon-github" href="http://www.github.com/dmmendez"><span>GitHub</span></a></li>
+          
+            <li><a target="_blank" class="icon-linkedin" href="http://www.linkedin.com/in/dmmendez"><span>LinkedIn</span></a></li>
+          
+            <li><a target="_blank" class="icon-facebook" href="http://www.facebook.com/deric.mendez"><span>Facebook</span></a></li>
+          
+        </ul>
+      </header>
+
+      <div class="main" role="main">
+          <article>
+    <h1 id='pull_a_thumbnail_gallery_from_picasas_api'>Pull a thumbnail gallery from Picasa&#8217;s API</h1>
+
+<p>You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my <a href='https://picasaweb.google.com/dmmendez' target='_blank'>Picasa Web Album</a>.&#160; Just for reference, <a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'>Picasa has a nice api</a> where you can pull a myriad of feeds and different types of feeds.&#160; In my case, I just wanted to pull in six thumbnails from a specific album named &#34;Featured&#34; in a JSON format.</p>
+
+<p>Starting off, here is the exact url I used to pull in my feed:</p>
+
+<pre><code>https://picasaweb.google.com/data/feed/base/user/113822536772850233036/albumid/5587272886788976673?kind=photo&amp;amp;max-results=6&amp;amp;thumbsize=80&amp;amp;alt=json&amp;amp;fields=entry(link[@rel=&amp;#39;alternate&amp;#39;],media:group(media:thumbnail))</code></pre>
+
+<p>All of the numbers before the query string are just user and album id&#39;s you need from your album.&#160; You can find more information in the <a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'>API</a>.&#160; You can find these values easily by browsing your Picasa albums and looking at the url and RSS feeds.</p>
+
+<p>Now, I&#39;ll break down each parameter just to simply show what I did (although the API does way more than what I&#39;m showing).</p>
+<table>
+    <tbody>
+        <tr>
+            <td>kind</td>
+            <td>photo</td>
+            <td>Let&#39;s you request different kinds of feeds</td>
+        </tr>
+        <tr>
+            <td>max-results</td>
+            <td>6</td>
+            <td>Maximun number of results</td>
+        </tr>
+        <tr>
+            <td>thumbsize</td>
+            <td>80</td>
+            <td>Size of thumbnail, which is variable.</td>
+        </tr>
+        <tr>
+            <td>alt</td>
+            <td>json</td>
+            <td>Type of feed, default is RSS</td>
+        </tr>
+        <tr>
+            <td>fields</td>
+            <td>
+                <p>
+                    entry(<br />
+                    &nbsp;link[@rel=&#39;alternate&#39;],<br />
+                    &nbsp;media:group(media:thumbnail)<br />
+                    )</p>
+            </td>
+            <td>This option dictates what fields come through to your field.&nbsp; So if you don&#39;t want to clutter your feed with values you won&#39;t use, that can be controlled here.</td>
+        </tr>
+    </tbody>
+</table>
+<p>My favorite option had to be the &#34;fields&#34; parameter, just because it allows me to really narrow my feeds down so it&#39;s not so cluttered with useless values.</p>
+
+<p>Enjoy pulling your feeds from Picasa.</p>
+  </article>
+
+        
+        <!--<aside>
+          <h2>Recent Articles</h2>
+          <ol>
+            
+              <li><a href="/2012/12/11/cardify.html">Cardify</a> <span>Dec 11</span></li>
+            
+              <li><a href="/2011/03/27/picasa-javascript-gallery.html">Pull a thumbnail gallery from Picasa's API</a> <span>Mar 27</span></li>
+            
+          </ol>
+
+          <h2>Tags</h2>
+          <ol>
+            
+              <li><a href="/tags/picasa.html">picasa (1)</a></li>
+            
+              <li><a href="/tags/thumbnails.html">thumbnails (1)</a></li>
+            
+              <li><a href="/tags/gallery.html">gallery (1)</a></li>
+            
+              <li><a href="/tags/api.html">api (1)</a></li>
+            
+              <li><a href="/tags/javascript.html">javascript (1)</a></li>
+            
+              <li><a href="/tags/cardify.html">cardify (1)</a></li>
+            
+          </ol>
+
+          <h2>By Year</h2>
+          <ol>
+            
+              <li><a href="/2012.html">2012 (1)</a></li>
+            
+              <li><a href="/2011.html">2011 (1)</a></li>
+            
+          </ol>
+        </aside>-->
+      </div>
+
+      <footer class="page-footer">
+        &copy; 2012 &mdash; <a href="http://www.dericmendez.com">Deric Mendez</a>
+      </footer>
+    </div>
+
+
+  </body>
+</html>
