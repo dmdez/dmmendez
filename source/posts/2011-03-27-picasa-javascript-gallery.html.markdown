@@ -4,8 +4,6 @@ date: 2011-03-27
 tags: picasa, thumbnails, gallery, api, javascript
 ---
 
-# Pull a thumbnail gallery from Picasa's API
-
 You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my <a href="https://picasaweb.google.com/dmmendez" target="_blank">Picasa Web Album</a>.&nbsp; Just for reference, <a href="http://code.google.com/apis/picasaweb/docs/2.0/reference.html" target="_blank">Picasa has a nice api</a> where you can pull a myriad of feeds and different types of feeds.&nbsp; In my case, I just wanted to pull in six thumbnails from a specific album named &quot;Featured&quot; in a JSON format.
 
 Starting off, here is the exact url I used to pull in my feed:

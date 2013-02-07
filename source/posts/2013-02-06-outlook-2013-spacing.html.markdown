@@ -4,9 +4,7 @@ date: 2013-02-06
 tags: outlook 2013, email
 ---
 
-# Are you noticing extra spacing above images in Outlook 2013?
-
-Well, there's yet another email hack that you'll have to apply to all of your HTML emails to address this issue.
+Are you noticing extra spacing above images in Outlook 2013? Well, there's yet another email hack that you'll have to apply to all of your HTML emails to address this issue.
 
 ## Here's how your markup probably currently looks like for the image
 
