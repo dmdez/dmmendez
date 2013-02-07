@@ -18,16 +18,12 @@
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;h1 id='are_you_noticing_extra_spacing_above_images_in_outlook_2013'&gt;Are you noticing extra spacing above images in Outlook 2013?&lt;/h1&gt;
-
-&lt;p&gt;Well, there&amp;#8217;s yet another email hack that you&amp;#8217;ll have to apply to all of your HTML emails to address this issue.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;Are you noticing extra spacing above images in Outlook 2013? Well, there&amp;#8217;s yet another email hack that you&amp;#8217;ll have to apply to all of your HTML emails to address this issue.&lt;/p&gt;
 
 &lt;h2 id='heres_how_your_markup_probably_currently_looks_like_for_the_image'&gt;Here&amp;#8217;s how your markup probably currently looks like for the image&lt;/h2&gt;
 &lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
 &amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;table border=&amp;quot;0&amp;quot; cellspacing=&amp;quot;0&amp;quot; cellpadding=&amp;quot;0&amp;quot;&amp;amp;gt;&lt;/pre&gt;</summary>
-    <content type="html">&lt;h1 id='are_you_noticing_extra_spacing_above_images_in_outlook_2013'&gt;Are you noticing extra spacing above images in Outlook 2013?&lt;/h1&gt;
-
-&lt;p&gt;Well, there&amp;#8217;s yet another email hack that you&amp;#8217;ll have to apply to all of your HTML emails to address this issue.&lt;/p&gt;
+    <content type="html">&lt;p&gt;Are you noticing extra spacing above images in Outlook 2013? Well, there&amp;#8217;s yet another email hack that you&amp;#8217;ll have to apply to all of your HTML emails to address this issue.&lt;/p&gt;
 
 &lt;h2 id='heres_how_your_markup_probably_currently_looks_like_for_the_image'&gt;Here&amp;#8217;s how your markup probably currently looks like for the image&lt;/h2&gt;
 &lt;pre&gt;&lt;code&gt;&amp;lt;table border="0" cellspacing="0" cellpadding="0"&amp;gt;
@@ -63,12 +59,8 @@
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html">&lt;h1 id='pull_a_thumbnail_gallery_from_picasas_api'&gt;Pull a thumbnail gallery from Picasa&amp;#8217;s API&lt;/h1&gt;
-
-&lt;p&gt;You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my &lt;a href='https://picasaweb.google.com/dmmendez' target='_blank'&gt;Picasa Web Album&lt;/a&gt;.&amp;#160; Just for reference, &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;Picasa has a nice api&lt;/a&gt; where you can pull a myriad of feeds and different types of feeds.&amp;#160; In my case, I just wanted to pull in six thumbnails from a specific album named &amp;#34;Featured&amp;#34; in a JSON format.&lt;/p&gt;</summary>
-    <content type="html">&lt;h1 id='pull_a_thumbnail_gallery_from_picasas_api'&gt;Pull a thumbnail gallery from Picasa&amp;#8217;s API&lt;/h1&gt;
-
-&lt;p&gt;You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my &lt;a href='https://picasaweb.google.com/dmmendez' target='_blank'&gt;Picasa Web Album&lt;/a&gt;.&amp;#160; Just for reference, &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;Picasa has a nice api&lt;/a&gt; where you can pull a myriad of feeds and different types of feeds.&amp;#160; In my case, I just wanted to pull in six thumbnails from a specific album named &amp;#34;Featured&amp;#34; in a JSON format.&lt;/p&gt;
+    <summary type="html">&lt;p&gt;You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my &lt;a href='https://picasaweb.google.com/dmmendez' target='_blank'&gt;Picasa Web Album&lt;/a&gt;.&amp;#160; Just for reference, &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;Picasa has a nice api&lt;/a&gt; where you can pull a myriad of feeds and different types of feeds.&amp;#160; In my case, I just wanted to pull in six thumbnails from a specific album named &amp;#34;Featured&amp;#34; in a JSON format.&lt;/p&gt;</summary>
+    <content type="html">&lt;p&gt;You will notice (currently at the top) on my site that I have a small list of featured thumbnails which will link to each individual picture in my &lt;a href='https://picasaweb.google.com/dmmendez' target='_blank'&gt;Picasa Web Album&lt;/a&gt;.&amp;#160; Just for reference, &lt;a href='http://code.google.com/apis/picasaweb/docs/2.0/reference.html' target='_blank'&gt;Picasa has a nice api&lt;/a&gt; where you can pull a myriad of feeds and different types of feeds.&amp;#160; In my case, I just wanted to pull in six thumbnails from a specific album named &amp;#34;Featured&amp;#34; in a JSON format.&lt;/p&gt;
 
 &lt;p&gt;Starting off, here is the exact url I used to pull in my feed:&lt;/p&gt;
 

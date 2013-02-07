@@ -532,8 +532,17 @@ table {
   /* line 109, styles.css.scss */
   .main article {
     padding: 0 1em; }
+    /* line 112, styles.css.scss */
+    .main article header .date {
+      margin: 0;
+      font-style: italic; }
+    /* line 113, styles.css.scss */
+    .main article header h1 {
+      margin: 0 0 .5em;
+      padding: 0 0 .5em;
+      border-bottom: 1px solid #ccc; }
 
-/* line 112, styles.css.scss */
+/* line 122, styles.css.scss */
 .page-header {
   text-align: center;
   *zoom: 1; }
@@ -542,15 +551,15 @@ table {
     content: "";
     display: table;
     clear: both; }
-  /* line 116, styles.css.scss */
+  /* line 126, styles.css.scss */
   .page-header ul {
     margin: 0;
     padding: 0;
     list-style-type: none; }
-  /* line 117, styles.css.scss */
+  /* line 127, styles.css.scss */
   .page-header li {
     display: inline; }
-  /* line 118, styles.css.scss */
+  /* line 128, styles.css.scss */
   .page-header li a {
     display: inline-block;
     background: #fff;
@@ -563,43 +572,43 @@ table {
     height: 1.6em;
     width: 1.6em;
     text-align: center; }
-    /* line 131, styles.css.scss */
+    /* line 141, styles.css.scss */
     .page-header li a span {
       display: none; }
-    /* line 132, styles.css.scss */
+    /* line 142, styles.css.scss */
     .page-header li a:before {
       position: relative;
       left: -0.05em; }
-    /* line 133, styles.css.scss */
+    /* line 143, styles.css.scss */
     .page-header li a.icon-linkedin {
       color: #069; }
-    /* line 134, styles.css.scss */
+    /* line 144, styles.css.scss */
     .page-header li a.icon-facebook {
       color: #627AAD; }
-    /* line 135, styles.css.scss */
+    /* line 145, styles.css.scss */
     .page-header li a:hover {
       background: #666;
       color: #fff; }
-    /* line 136, styles.css.scss */
+    /* line 146, styles.css.scss */
     .page-header li a:hover.icon-linkedin {
       background-color: #069; }
-    /* line 137, styles.css.scss */
+    /* line 147, styles.css.scss */
     .page-header li a:hover.icon-facebook {
       background-color: #627AAD; }
 
-/* line 141, styles.css.scss */
+/* line 151, styles.css.scss */
 .page-footer {
   padding: 2em 0;
   color: #999;
   text-align: center; }
-  /* line 147, styles.css.scss */
+  /* line 157, styles.css.scss */
   .page-footer a {
     color: #777; }
 
-/* line 150, styles.css.scss */
+/* line 160, styles.css.scss */
 .posts {
   font-size: .8em; }
-  /* line 152, styles.css.scss */
+  /* line 162, styles.css.scss */
   .posts a {
     background: #f3f3f3;
     border-radius: 1em;
@@ -607,34 +616,34 @@ table {
     padding: .5em 5em .5em 1em;
     margin: 0 0 1em;
     position: relative; }
-    /* line 160, styles.css.scss */
+    /* line 170, styles.css.scss */
     .posts a span {
       color: #bbb;
       position: absolute;
       top: .5em;
       right: 1em; }
-    /* line 166, styles.css.scss */
+    /* line 176, styles.css.scss */
     .posts a:hover {
       background: #fff; }
 
 @media (min-width: 39em) {
-  /* line 173, styles.css.scss */
+  /* line 183, styles.css.scss */
   body {
     font-size: 1em; }
 
-  /* line 174, styles.css.scss */
+  /* line 184, styles.css.scss */
   .posts {
     font-size: 1em; }
 
-  /* line 175, styles.css.scss */
+  /* line 185, styles.css.scss */
   .brand {
     font-size: 2.6em;
     float: left; }
 
-  /* line 176, styles.css.scss */
+  /* line 186, styles.css.scss */
   .page-header {
     text-align: left; }
-    /* line 178, styles.css.scss */
+    /* line 188, styles.css.scss */
     .page-header ul {
       float: right;
       display: block;
