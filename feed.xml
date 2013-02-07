@@ -11,19 +11,48 @@
   </author>
   <entry>
     <title>Outlook 2013 Email Space Rendering Issue</title>
-    <link rel="alternate" href="/2013/02/06/outlook2013spacing.html"/>
-    <id>/2013/02/06/outlook2013spacing.html</id>
+    <link rel="alternate" href="/2013/02/06/outlook-2013-spacing.html"/>
+    <id>/2013/02/06/outlook-2013-spacing.html</id>
     <published>2013-02-06T00:00:00Z</published>
     <updated>2013-02-06T00:00:00Z</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <summary type="html"># Outlook 2013 Email Space Rendering Issue
+    <summary type="html">&lt;h1 id='are_you_noticing_extra_spacing_above_images_in_outlook_2013'&gt;Are you noticing extra spacing above images in Outlook 2013?&lt;/h1&gt;
 
-</summary>
-    <content type="html"># Outlook 2013 Email Space Rendering Issue
+&lt;p&gt;Well, there&amp;#8217;s yet another email hack that you&amp;#8217;ll have to apply to all of your HTML emails to address this issue.&lt;/p&gt;
 
-</content>
+&lt;h2 id='heres_how_your_markup_probably_currently_looks_like_for_the_image'&gt;Here&amp;#8217;s how your markup probably currently looks like for the image&lt;/h2&gt;
+&lt;pre class='markdown-html-error' style='border: solid 3px red; background-color: pink'&gt;REXML could not parse this XML/HTML: 
+&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;amp;lt;table border=&amp;quot;0&amp;quot; cellspacing=&amp;quot;0&amp;quot; cellpadding=&amp;quot;0&amp;quot;&amp;amp;gt;&lt;/pre&gt;</summary>
+    <content type="html">&lt;h1 id='are_you_noticing_extra_spacing_above_images_in_outlook_2013'&gt;Are you noticing extra spacing above images in Outlook 2013?&lt;/h1&gt;
+
+&lt;p&gt;Well, there&amp;#8217;s yet another email hack that you&amp;#8217;ll have to apply to all of your HTML emails to address this issue.&lt;/p&gt;
+
+&lt;h2 id='heres_how_your_markup_probably_currently_looks_like_for_the_image'&gt;Here&amp;#8217;s how your markup probably currently looks like for the image&lt;/h2&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;table border="0" cellspacing="0" cellpadding="0"&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td&amp;gt;&amp;lt;img src="../image.png" alt="Image" width="500" height="8" style="display: block;" /&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td&amp;gt;&amp;lt;img src="../image.png" alt="Image" width="500" height="40" style="display: block;" /&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The problem with Outlook is every table cell you use contains a specific line height which is probably defined by the email client.&lt;/p&gt;
+
+&lt;p&gt;So for most images, you might not see this extra space, but as in the example above, you&amp;#8217;ll see one of the images has a height of 8 pixels. Most document line heights are going to be around 20 something pixels. Since this image is smaller than the line-height, Outlook will use the line height to fill in the rest of that cell.&lt;/p&gt;
+
+&lt;h2 id='heres_the_fix'&gt;Here&amp;#8217;s the fix&lt;/h2&gt;
+
+&lt;p&gt;Add the &lt;em&gt;height&lt;/em&gt; and &lt;em&gt;line-height&lt;/em&gt; properties to the image&amp;#8217;s parent cell with the same value of the image&amp;#8217;s height.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;table border="0" cellspacing="0" cellpadding="0"&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td &lt;span class='highlight'&gt;style="height: 8px; line-height: 8px;"&lt;/span&gt;&amp;gt;&amp;lt;img src="../image.png" alt="Image" width="500" height="8" style="display: block;" /&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+    &amp;lt;tr&amp;gt;
+        &amp;lt;td&amp;gt;&amp;lt;img src="../image.png" alt="Image" width="500" height="40" style="display: block;" /&amp;gt;&amp;lt;/td&amp;gt;
+    &amp;lt;/tr&amp;gt;
+&amp;lt;/table&amp;gt;&lt;/code&gt;&lt;/pre&gt;</content>
   </entry>
   <entry>
     <title>Pull a thumbnail gallery from Picasa's API</title>

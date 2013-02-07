@@ -26,9 +26,34 @@
 
       <div class="main" role="main">
           <article>
-    # Outlook 2013 Email Space Rendering Issue
+    <h1 id='are_you_noticing_extra_spacing_above_images_in_outlook_2013'>Are you noticing extra spacing above images in Outlook 2013?</h1>
 
+<p>Well, there&#8217;s yet another email hack that you&#8217;ll have to apply to all of your HTML emails to address this issue.</p>
 
+<h2 id='heres_how_your_markup_probably_currently_looks_like_for_the_image'>Here&#8217;s how your markup probably currently looks like for the image</h2>
+<pre><code>&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;img src="../image.png" alt="Image" width="500" height="8" style="display: block;" /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;img src="../image.png" alt="Image" width="500" height="40" style="display: block;" /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<p>The problem with Outlook is every table cell you use contains a specific line height which is probably defined by the email client.</p>
+
+<p>So for most images, you might not see this extra space, but as in the example above, you&#8217;ll see one of the images has a height of 8 pixels. Most document line heights are going to be around 20 something pixels. Since this image is smaller than the line-height, Outlook will use the line height to fill in the rest of that cell.</p>
+
+<h2 id='heres_the_fix'>Here&#8217;s the fix</h2>
+
+<p>Add the <em>height</em> and <em>line-height</em> properties to the image&#8217;s parent cell with the same value of the image&#8217;s height.</p>
+<pre><code>&lt;table border="0" cellspacing="0" cellpadding="0"&gt;
+    &lt;tr&gt;
+        &lt;td <span class='highlight'>style="height: 8px; line-height: 8px;"</span>&gt;&lt;img src="../image.png" alt="Image" width="500" height="8" style="display: block;" /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;&lt;img src="../image.png" alt="Image" width="500" height="40" style="display: block;" /&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
   </article>
 
         
@@ -36,7 +61,7 @@
           <h2>Recent Articles</h2>
           <ol>
             
-              <li><a href="/2013/02/06/outlook2013spacing.html">Outlook 2013 Email Space Rendering Issue</a> <span>Feb  6</span></li>
+              <li><a href="/2013/02/06/outlook-2013-spacing.html">Outlook 2013 Email Space Rendering Issue</a> <span>Feb  6</span></li>
             
               <li><a href="/2011/03/27/picasa-javascript-gallery.html">Pull a thumbnail gallery from Picasa's API</a> <span>Mar 27</span></li>
             
