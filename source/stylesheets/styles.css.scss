@@ -163,15 +163,16 @@ table {
         background: #f3f3f3;
         border-radius: 1em;
         display: block;
-        padding: .5em 9em .5em 1em;
+        padding: .5em 4.5em .5em 1em;
         margin: 0 0 1em;
         position: relative;
 
         span { 
             color: #bbb; 
             position: absolute;
-            top: .5em;
+            top: .9em;
             right: 1em;
+            font-size: .7em;
         }
         &:hover {
             background: #fff;
