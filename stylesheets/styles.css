@@ -613,37 +613,38 @@ table {
     background: #f3f3f3;
     border-radius: 1em;
     display: block;
-    padding: .5em 9em .5em 1em;
+    padding: .5em 4.5em .5em 1em;
     margin: 0 0 1em;
     position: relative; }
     /* line 170, styles.css.scss */
     .posts a span {
       color: #bbb;
       position: absolute;
-      top: .5em;
-      right: 1em; }
-    /* line 176, styles.css.scss */
+      top: .9em;
+      right: 1em;
+      font-size: .7em; }
+    /* line 177, styles.css.scss */
     .posts a:hover {
       background: #fff; }
 
 @media (min-width: 39em) {
-  /* line 183, styles.css.scss */
+  /* line 184, styles.css.scss */
   body {
     font-size: 1em; }
 
-  /* line 184, styles.css.scss */
+  /* line 185, styles.css.scss */
   .posts {
     font-size: 1em; }
 
-  /* line 185, styles.css.scss */
+  /* line 186, styles.css.scss */
   .brand {
     font-size: 2.6em;
     float: left; }
 
-  /* line 186, styles.css.scss */
+  /* line 187, styles.css.scss */
   .page-header {
     text-align: left; }
-    /* line 188, styles.css.scss */
+    /* line 189, styles.css.scss */
     .page-header ul {
       float: right;
       display: block;
