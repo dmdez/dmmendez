@@ -652,7 +652,7 @@ table {
   .apps li a:hover {
     background-color: #df490e; }
 
-@media (min-width: 21em) {
+@media (min-width: 22em) {
   /* line 207, styles.css.scss */
   .apps h2 {
     float: left; }
