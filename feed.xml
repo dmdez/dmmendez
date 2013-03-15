@@ -51,32 +51,6 @@
 &amp;lt;/table&amp;gt;&lt;/code&gt;&lt;/pre&gt;</content>
   </entry>
   <entry>
-    <title>Cardify</title>
-    <link rel="alternate" href="/2012/12/11/cardify.html"/>
-    <id>/2012/12/11/cardify.html</id>
-    <published>2012-12-11T00:00:00Z</published>
-    <updated>2012-12-11T00:00:00Z</updated>
-    <author>
-      <name>Article Author</name>
-    </author>
-    <summary type="html">&lt;h1 id='cardify'&gt;Cardify!!!&lt;/h1&gt;
-
-&lt;p&gt;So I had a client that had a particular need to print out recipe sized cards in the dimensions of 3x5, 4x6, etc&amp;#8230; Oh yeah, and I needed to be done within 40 hours. So there I was wondering what the hell I was going to do to produce this type of output within a normal work week. Since I&amp;#8217;m a frontend developer, I immediately thought of a client-side solution. But then I was trying to figure out how I was going to break content apart and overflow that content into multiple sections&amp;#8230; dynamically.&lt;/p&gt;</summary>
-    <content type="html">&lt;h1 id='cardify'&gt;Cardify!!!&lt;/h1&gt;
-
-&lt;p&gt;So I had a client that had a particular need to print out recipe sized cards in the dimensions of 3x5, 4x6, etc&amp;#8230; Oh yeah, and I needed to be done within 40 hours. So there I was wondering what the hell I was going to do to produce this type of output within a normal work week. Since I&amp;#8217;m a frontend developer, I immediately thought of a client-side solution. But then I was trying to figure out how I was going to break content apart and overflow that content into multiple sections&amp;#8230; dynamically.&lt;/p&gt;
-
-&lt;h2 id='idea_1'&gt;Idea 1&lt;/h2&gt;
-
-&lt;p&gt;We&amp;#8217;ll use the 3x5 cards as a base example for this. My first idea was to consume a block of content with javascript and calculate the targeted width and height of the 3x5 card and that would get me the number of cards I needed, and then clone the content into each card and offset the content like so:&lt;/p&gt;
-
-&lt;p&gt;&lt;img alt='' src='/images/cardify-example1.png' /&gt;&lt;/p&gt;
-
-&lt;p&gt;The problem I had here was I could never get the content to overflow to the next page accurately. There would always be lines of content cut off in odd places that made the cards unreadable.&lt;/p&gt;
-
-&lt;h2 id='idea_2'&gt;Idea 2&lt;/h2&gt;</content>
-  </entry>
-  <entry>
     <title>Pull a thumbnail gallery from Picasa's API</title>
     <link rel="alternate" href="/2011/03/27/picasa-javascript-gallery.html"/>
     <id>/2011/03/27/picasa-javascript-gallery.html</id>
