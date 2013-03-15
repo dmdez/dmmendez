@@ -607,8 +607,9 @@ table {
 
 /* line 160, styles.css.scss */
 .posts {
-  font-size: .8em; }
-  /* line 162, styles.css.scss */
+  font-size: .8em;
+  margin: 0 0 3em; }
+  /* line 163, styles.css.scss */
   .posts a {
     background: #f3f3f3;
     border-radius: 1em;
@@ -616,36 +617,82 @@ table {
     padding: .5em 4.5em .5em 1em;
     margin: 0 0 1em;
     position: relative; }
-    /* line 170, styles.css.scss */
+    /* line 171, styles.css.scss */
     .posts a span {
       color: #bbb;
       position: absolute;
       top: .9em;
       right: 1em;
       font-size: .7em; }
-    /* line 177, styles.css.scss */
+    /* line 178, styles.css.scss */
     .posts a:hover {
       background: #fff; }
 
+/* line 186, styles.css.scss */
+.apps ul, .apps li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+/* line 187, styles.css.scss */
+.apps h2 {
+  margin: 0 0 1em;
+  color: #999; }
+/* line 188, styles.css.scss */
+.apps li a {
+  display: block;
+  background: #f15e25;
+  color: #fff;
+  text-shadow: none;
+  padding: .5em 1em;
+  margin: 0 0 1em;
+  font-size: 1.1em;
+  border-radius: 1em; }
+  /* line 198, styles.css.scss */
+  .apps li a:hover {
+    background-color: #df490e; }
+
+@media (min-width: 20em) {
+  /* line 206, styles.css.scss */
+  .apps h2 {
+    float: left; }
+  /* line 207, styles.css.scss */
+  .apps ul {
+    *zoom: 1;
+    margin-left: 5em; }
+    /* line 38, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    .apps ul:after {
+      content: "";
+      display: table;
+      clear: both; }
+  /* line 208, styles.css.scss */
+  .apps li {
+    float: left;
+    width: 49%;
+    margin-right: 1%;
+    box-sizing: border-box; } }
 @media (min-width: 39em) {
-  /* line 184, styles.css.scss */
+  /* line 222, styles.css.scss */
   body {
     font-size: 1em; }
 
-  /* line 185, styles.css.scss */
+  /* line 223, styles.css.scss */
   .posts {
     font-size: 1em; }
 
-  /* line 186, styles.css.scss */
+  /* line 224, styles.css.scss */
   .brand {
     font-size: 2.6em;
     float: left; }
 
-  /* line 187, styles.css.scss */
+  /* line 225, styles.css.scss */
   .page-header {
     text-align: left; }
-    /* line 189, styles.css.scss */
+    /* line 227, styles.css.scss */
     .page-header ul {
       float: right;
       display: block;
-      padding: 1.2em 0 0; } }
+      padding: 1.2em 0 0; }
+
+  /* line 233, styles.css.scss */
+  .apps li {
+    width: 32.3%; } }
