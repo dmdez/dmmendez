@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="slide-in-menu/app2.css">
+    </head>
+    <body>
+        
+        <h1>Slide-in-style Menu Demo</h1>
+        <nav class="primary-menu">
+            <ul>
+                <li><a href="#">Primary Menu Item 1</a></li>
+                <li><a href="#">Primary Menu Item 2</a></li>
+                <li><a href="#">Primary Menu Item 3</a></li>
+                <li><a href="#">Primary Menu Item 4</a>
+                    <ul>
+                        <li><a href="#">Secondary Menu Item A</a></li>
+                        <li><a href="#">Secondary Menu Item B</a></li>
+                        <li><a href="#">Secondary Menu Item C</a>
+                            <ul>
+                                <li><a href="#">Terciary Menu Item 1</a></li>
+                                <li><a href="#">Terciary Menu Item 2</a></li>
+                                <li><a href="#">Terciary Menu Item 3</a></li>
+                                <li><a href="#">Terciary Menu Item 4</a></li>
+                                <li><a href="#">Terciary Menu Item 5</a></li>
+                                <li><a href="#">Terciary Menu Item 6</a></li>
+                                <li><a href="#">Terciary Menu Item 7</a></li>
+                                <li><a href="#">Terciary Menu Item 8</a></li>
+                                <li><a href="#">Terciary Menu Item 9</a></li>
+                                <li><a href="#">Terciary Menu Item 10</a></li>
+                                <li><a href="#">Terciary Menu Item 11</a></li>
+                                <li><a href="#">Terciary Menu Item 12</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Secondary Menu Item D</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Primary Menu Item 5</a></li>
+                <li><a href="#">Primary Menu Item 6</a></li>
+                <li><a href="#">Primary Menu Item 7</a></li>
+                <li><a href="#">Primary Menu Item 8</a></li>
+                <li><a href="#">Primary Menu Item 9</a></li>
+                <li><a href="#">Primary Menu Item 10</a></li>
+            </ul>
+        </nav>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <script src="slide-in-menu/slideInMenu.js"></script>
+        <script>
+            (function($) {                
+                $('.primary-menu').slideInMenu({
+                    menuElement: 'ul',
+                    clickableElement: '> a'
+                });
+
+            })(jQuery);
+        </script>
+    </body>
+</html>

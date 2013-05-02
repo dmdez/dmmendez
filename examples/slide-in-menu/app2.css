@@ -1,0 +1,59 @@
+/* line 9, ../examples/slide-in-menu/app2.css.scss */
+body {
+  background: #ccc; }
+
+/* line 13, ../examples/slide-in-menu/app2.css.scss */
+.primary-menu {
+  background: #999999;
+  width: 50%;
+  overflow: hidden;
+  min-height: 100%;
+  -webkit-transition: left 0.4s ease-in-out;
+  -moz-transition: left 0.4s ease-in-out;
+  -o-transition: left 0.4s ease-in-out;
+  transition: left 0.4s ease-in-out; }
+  /* line 20, ../examples/slide-in-menu/app2.css.scss */
+  .primary-menu ul, .primary-menu li {
+    margin: 0;
+    padding: 0;
+    list-style: none; }
+  /* line 25, ../examples/slide-in-menu/app2.css.scss */
+  .primary-menu ul {
+    width: 100%;
+    background: #999999;
+    position: relative;
+    -webkit-transition: left 0.4s ease-in-out;
+    -moz-transition: left 0.4s ease-in-out;
+    -o-transition: left 0.4s ease-in-out;
+    transition: left 0.4s ease-in-out; }
+  /* line 31, ../examples/slide-in-menu/app2.css.scss */
+  .primary-menu > ul ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100%; }
+  /* line 38, ../examples/slide-in-menu/app2.css.scss */
+  .primary-menu li.active > ul {
+    left: 0; }
+  /* line 40, ../examples/slide-in-menu/app2.css.scss */
+  .primary-menu li.back > a:before {
+    content: '<'; }
+  /* line 42, ../examples/slide-in-menu/app2.css.scss */
+  .primary-menu li a {
+    display: block;
+    border-top: 1px solid #666666;
+    color: #fff;
+    padding: .8em;
+    background-position: center right;
+    background-repeat: no-repeat;
+    *zoom: 1; }
+    /* line 38, ../../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/utilities/general/_clearfix.scss */
+    .primary-menu li a:after {
+      content: "";
+      display: table;
+      clear: both; }
+    /* line 52, ../examples/slide-in-menu/app2.css.scss */
+    .primary-menu li a.hasChildren:before {
+      content: '>';
+      float: right; }
