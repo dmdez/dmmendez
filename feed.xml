@@ -37,7 +37,28 @@
 &lt;pre&gt;&lt;code&gt;compass_config do |config|
   config.output_style = :compressed
 end
-&lt;/code&gt;&lt;/pre&gt;</content>
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id='javascript'&gt;Javascript&lt;/h2&gt;
+
+&lt;p&gt;And if you&amp;#8217;re happening to be using the sprockets engine to compile Javascript, just replace the javascript_include_tag helper with the following.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;script&amp;gt;
+// relative to your defined javascript folder
+&amp;lt;%= sprockets.find_asset('modernizr.js').to_s %&amp;gt;
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;But if you would like to compress your javascript inline:&lt;/p&gt;
+
+&lt;h3 id='compression'&gt;Compression&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;&amp;lt;% app_js = sprockets.find_asset('app.js').to_s %&amp;gt;
+&amp;lt;script&amp;gt;
+&amp;lt;%= defined?(Uglifier) ? Uglifier.compile(app_js) : app_js %&amp;gt;
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now, when your minify_javascript is set in the config.rb, your javascript will be compressed inline.&lt;/p&gt;
+
+&lt;h2 id='conclusion'&gt;Conclusion&lt;/h2&gt;
+
+&lt;p&gt;Keep in mind, these are solutions that I (a frontend developer) have come up with. I am not a &amp;#8220;ruby developer&amp;#8221; by any means, so there are probably a ton of other ways to achieve inline assets, this just happens to be the best way I have come up with.&lt;/p&gt;</content>
   </entry>
   <entry>
     <title>Outlook 2013 Email Space Rendering Issue</title>

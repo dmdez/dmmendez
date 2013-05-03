@@ -49,6 +49,27 @@
   config.output_style = :compressed
 end
 </code></pre>
+<h2 id='javascript'>Javascript</h2>
+
+<p>And if you&#8217;re happening to be using the sprockets engine to compile Javascript, just replace the javascript_include_tag helper with the following.</p>
+<pre><code>&lt;script&gt;
+// relative to your defined javascript folder
+&lt;%= sprockets.find_asset('modernizr.js').to_s %&gt;
+&lt;/script&gt;
+</code></pre>
+<p>But if you would like to compress your javascript inline:</p>
+
+<h3 id='compression'>Compression</h3>
+<pre><code>&lt;% app_js = sprockets.find_asset('app.js').to_s %&gt;
+&lt;script&gt;
+&lt;%= defined?(Uglifier) ? Uglifier.compile(app_js) : app_js %&gt;
+&lt;/script&gt;
+</code></pre>
+<p>Now, when your minify_javascript is set in the config.rb, your javascript will be compressed inline.</p>
+
+<h2 id='conclusion'>Conclusion</h2>
+
+<p>Keep in mind, these are solutions that I (a frontend developer) have come up with. I am not a &#8220;ruby developer&#8221; by any means, so there are probably a ton of other ways to achieve inline assets, this just happens to be the best way I have come up with.</p>
   </article>
 
 
